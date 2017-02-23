@@ -11,7 +11,7 @@ int main ()
 	setlocale (0, "rus");
 	
 	int n;
-	printf ("Введите размерность куба: ");
+	printf ("Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РєСѓР±Р°: ");
 	scanf ("%i", &n);
 	
 	int ***cube = new int **[n];
@@ -22,7 +22,7 @@ int main ()
 			cube[i][j] = new int [n];
 	}
 	
-	//заполнение куба
+	//Р·Р°РїРѕР»РЅРµРЅРёРµ РєСѓР±Р°
 	for (int z = 0; z < n; z++)
 	{
 		for (int y = 0; y < n; y++)
@@ -32,10 +32,10 @@ int main ()
 		}
 	}
 	
-	//вывод куба
+	//РІС‹РІРѕРґ РєСѓР±Р°
 	for (int z = 0; z < n; z++)
 	{
-		printf ("\n%i Слой:\n", z + 1);
+		printf ("\n%i Г‘Г«Г®Г©:\n", z + 1);
 		for (int y = 0; y < n; y++)
 		{
 			for (int x = 0; x < n; x++) 			
@@ -47,7 +47,8 @@ int main ()
 	}
 	
 	int counter = 0;
-	//поиск просветов
+	
+	//РїРѕРёСЃРє РїСЂРѕСЃРІРµС‚РѕРІ
 	for (int z = 0; z < n; z++)
 	{		
 		for (int y = 0; y < n; y++)
@@ -65,34 +66,34 @@ int main ()
 			if (x_search == 0)
 			{
 				counter++;
-				printf ("\n\n%i просвет: слой: %i; строка: %i", counter, z + 1, y + 1);
+				printf ("\n\n%i РїСЂРѕСЃРІРµС‚: СЃР»РѕР№: %i; СЃС‚СЂРѕРєР°: %i", counter, z + 1, y + 1);
 			}
 			
 			if (y_search == 0)
 			{
 				counter++;
-				printf ("\n\n%i просвет: слой: %i; столбец: %i", counter, z + 1, y + 1);
+				printf ("\n\n%i РїСЂРѕСЃРІРµС‚: СЃР»РѕР№: %i; СЃС‚РѕР»Р±РµС†: %i", counter, z + 1, y + 1);
 			}
 			
 			if (z_search == 0)
 			{
 				counter++;
-				printf ("\n\n%i просвет: строка: %i; столбец: %i", counter, y + 1, z + 1);
+				printf ("\n\n%i РїСЂРѕСЃРІРµС‚: СЃС‚СЂРѕРєР°: %i; СЃС‚РѕР»Р±РµС†: %i", counter, y + 1, z + 1);
 			}
 		}		
 	}
 	
 	
-	//удаление памяти
+	//СѓРґР°Р»РµРЅРёРµ РїР°РјСЏС‚Рё
 	for (int i = 0; i < n; i++) 
 	{
-        for (int j = 0; j < n; j++)
+        	for (int j = 0; j < n; j++)
 		{
-            delete [] cube[i][j];
-        }
-        delete [] cube[i];
-    }
-    delete [] cube;
+            		delete [] cube[i][j];
+        	}
+        	delete [] cube[i];
+   	}
+    	delete [] cube;
     
     
 	getch();
