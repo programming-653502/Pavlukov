@@ -12,7 +12,7 @@ int main()
 	
 	unsigned int divider, dividend, division;
 		
-	printf ("Введите делимое и делитель: ");
+	printf ("Р’РІРµРґРёС‚Рµ РґРµР»РёРјРѕРµ Рё РґРµР»РёС‚РµР»СЊ: ");
 	scanf ("%i %i", &dividend, &divider);
 		
 	division = dividend / divider;
