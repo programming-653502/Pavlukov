@@ -19,7 +19,7 @@ void AverageLen(FILE *file, char *buffer, int FSize)
 		
 	averageWordLen = letter / word;
 	averageSentenceLen = word / sentence;
-	printf("Среднее число букв в слове: %f.\nСреднее число слов в предложении: %f.\n", averageWordLen, averageSentenceLen);
+	printf("Г‘Г°ГҐГ¤Г­ГҐГҐ Г·ГЁГ±Г«Г® ГЎГіГЄГў Гў Г±Г«Г®ГўГҐ: %f.\nГ‘Г°ГҐГ¤Г­ГҐГҐ Г·ГЁГ±Г«Г® Г±Г«Г®Гў Гў ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГЁ: %f.\n", averageWordLen, averageSentenceLen);
 }
 
 void LongestWord(char *buffer, int FSize)
@@ -47,7 +47,7 @@ void LongestWord(char *buffer, int FSize)
 		current = i - count;
 	}
 	max += current;
-	printf("Самое длинное слово: ");
+	printf("Г‘Г Г¬Г®ГҐ Г¤Г«ГЁГ­Г­Г®ГҐ Г±Г«Г®ГўГ®: ");
 	for (i = current; i < max; i++)
 		putchar(buffer[i]);
 	printf("\n");
@@ -78,7 +78,7 @@ void LongestSentence(char *buffer, int FSize)
 		current = i - count;
 	}
 	max += current;
-	printf("Самое длинное предложение: ");
+	printf("Г‘Г Г¬Г®ГҐ Г¤Г«ГЁГ­Г­Г®ГҐ ГЇГ°ГҐГ¤Г«Г®Г¦ГҐГ­ГЁГҐ: ");
 	for (i = current; i <= max; i++)
 		putchar(buffer[i]);
 	printf("\n");
@@ -93,13 +93,13 @@ int main()
 	long FSize;
 	FILE *file;
 	
-	printf("Введите имя файла: \n");
+	printf("Г‚ГўГҐГ¤ГЁГІГҐ ГЁГ¬Гї ГґГ Г©Г«Г : \n");//РІРІРѕРґ РёРјРµРЅРё С„Р°Р№Р»Р°.
 	gets(adress);
 	file = fopen(adress, "r");
 	
 	if (file == NULL)
 	{
-		printf("Файл не найден.");
+		printf("Г”Г Г©Г« Г­ГҐ Г­Г Г©Г¤ГҐГ­.");
 		getch();
 		exit(1);
 	}
@@ -111,7 +111,7 @@ int main()
 	
 	if (buffer == NULL)
 	{
-		printf("Файл пуст.");
+		printf("Г”Г Г©Г« ГЇГіГ±ГІ.");
 		getch();
 		exit(2);
 	}
