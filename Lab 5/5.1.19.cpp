@@ -2,7 +2,7 @@
 #include <conio.h>
 #include <windows.h>
 #include <math.h>
-#include <algorithm>// для reverse
+#include <algorithm>// РґР»СЏ reverse
 
 using namespace std;
 
@@ -19,7 +19,7 @@ unsigned int CheckForInt()
 		}
 		else
 		{		
-			printf("Ошибка ввода.\nВведите число в десятичной системе: ");
+			printf("ГЋГёГЁГЎГЄГ  ГўГўГ®Г¤Г .\nГ‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Гў Г¤ГҐГ±ГїГІГЁГ·Г­Г®Г© Г±ГЁГ±ГІГҐГ¬ГҐ: ");
 			cin.clear();
 			_flushall();
 		}
@@ -65,7 +65,7 @@ class List
 {
 	DecNum *Head = NULL, *Tail = NULL;
 	string bin_num = "";
-	int degree = -1;//степень десяти
+	int degree = -1;//СЃС‚РµРїРµРЅСЊ РґРµСЃСЏС‚Рё
 	
 	public:
 		void Add(unsigned int num);
@@ -100,7 +100,7 @@ void List::Show()
 	
 	while (tmp != NULL)
 	{
-		cout << counter << " цифра: " << tmp->num;
+		cout << counter << " Г¶ГЁГґГ°Г : " << tmp->num;
 		tmp = tmp->Prev;
 		cout << endl;
 		degree++;
@@ -113,7 +113,7 @@ void List::ToBin()
 {
 	DecNum *tmp = Tail;
 	
-	cout << "Перевод в двоичную систему:\n";
+	cout << "ГЏГҐГ°ГҐГўГ®Г¤ Гў Г¤ГўГ®ГЁГ·Г­ГіГѕ Г±ГЁГ±ГІГҐГ¬Гі:\n";
 	while (tmp != NULL)
 	{
 		unsigned int n = pow(10, degree) * tmp->num;
@@ -137,7 +137,7 @@ int main()
 	List dec;
 	unsigned int num_dec, tmp;
 	
-	cout << "Введите число в десятичной системе: ";
+	cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г·ГЁГ±Г«Г® Гў Г¤ГҐГ±ГїГІГЁГ·Г­Г®Г© Г±ГЁГ±ГІГҐГ¬ГҐ: ";
 	num_dec = CheckForInt();	
 	tmp = num_dec;
 	
