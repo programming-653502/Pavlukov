@@ -5,27 +5,6 @@
 using namespace std;
 int odd_count = 0;
 
-int CheckForInt()
-{
-	unsigned int num;
-	bool check = false;
-	while(check == false)
-	{
-		cin >> num ;
-		if(cin.good())
-		{
-			check = true;
-		}
-		else
-		{		
-			cout << "\aÎøèáêà ââîäà.\nÂâåäèòå öåëîå ÷èñëî: ";
-			cin.clear();
-			_flushall();
-		}
-	}
-	return num;
-}
-
 struct Tree 
 {
 	Tree *left;
@@ -87,7 +66,7 @@ int main()
 	f = fopen("File.txt", "r");
 	if (f == NULL) 
 	{
-		cout << "\aÔàéë íå íàéäåí.";
+		cout << "\aÃ”Ã Ã©Ã« Ã­Ã¥ Ã­Ã Ã©Ã¤Ã¥Ã­.";
 		getch();
 		return 1;
 	}
@@ -104,7 +83,7 @@ int main()
 
 	cout << "\n";
 	ShowOdd(SearchTree);
-	cout << "Êîëè÷åñòâî íå÷åòíûõ ÷èñåë: " << odd_count; 
+	cout << "ÃŠÃ®Ã«Ã¨Ã·Ã¥Ã±Ã²Ã¢Ã® Ã­Ã¥Ã·Ã¥Ã²Ã­Ã»Ãµ Ã·Ã¨Ã±Ã¥Ã«: " << odd_count; 
 	
 	getch();
 	return 0;
